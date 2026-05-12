@@ -1,0 +1,24 @@
+[project]
+name = "scifibrowser"
+version = "0.1.0"
+description = "Local Tiled browser for pyTEMlib-readable scientific data"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "exspy>=0.3.2",
+    "hyperspy>=2.4.0",
+    "ipykernel>=7.2.0",
+    "pytemlib>=0.2026.3.0",
+    "tiled[all]>=0.2.10b6.dev0",
+]
+
+[project.scripts]
+scifibrowser = "scifibrowser.launcher:main"
+scifibrowser-launcher = "scifibrowser.desktop_launcher:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["scifibrowser"]

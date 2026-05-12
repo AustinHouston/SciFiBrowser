@@ -1,0 +1,10 @@
+trees:
+  - path: /
+    tree: tiled.catalog:from_uri
+    args:
+      uri: sqlite+aiosqlite:///catalog.db
+      readable_storage:
+        - /Users/austin/Desktop/Projects
+      adapters_by_mimetype:
+        application/x-pytemlib: custom:PyTEMlibAdapter
+        application/x-emd: custom:PyTEMlibAdapter
